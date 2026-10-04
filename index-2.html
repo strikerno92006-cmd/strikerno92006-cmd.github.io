@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mansaray Investment</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #111827, #2563eb);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .profile {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      margin-bottom: 15px;
+      background: white;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    header p {
+      font-size: 18px;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    nav a {
+      color: #111827;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 12px;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    .hero {
+      text-align: center;
+      background: white;
+      margin-top: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .hero h2 {
+      color: #2563eb;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    h2.section-title {
+      text-align: center;
+      color: #111827;
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #111827;
+      color: white;
+      border-radius: 15px;
+    }
+
+    .social a {
+      display: inline-block;
+      margin: 8px;
+      padding: 10px 16px;
+      border-radius: 7px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .whatsapp { background: #25D366; }
+    .tiktok { background: #000; }
+    .facebook { background: #1877F2; }
+
+    footer {
+      text-align: center;
+      background: #0b1120;
+      color: white;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 7px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <!-- Put your picture in the same folder and name it profile.jpg -->
+    <img src="profile.jpg" alt="Mansaray Investment" class="profile">
+
+    <h1>MANSARAY INVESTMENT</h1>
+    <p>Makeni City, Sierra Leone</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home" class="hero">
+    <h2>Welcome to Mansaray Investment</h2>
+    <p>
+      We provide products and services designed to meet your everyday
+      technology and business needs.
+    </p>
+    <a href="#products" class="btn">View Products</a>
+  </section>
+
+  <section id="products">
+    <h2 class="section-title">Our Products</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>📱 Smart Phones</h3>
+        <p>Quality smartphones for communication, entertainment and business.</p>
+      </div>
+
+      <div class="card">
+        <h3>💻 Laptops</h3>
+        <p>Computers suitable for school, office work and personal use.</p>
+      </div>
+
+      <div class="card">
+        <h3>🎧 Headsets</h3>
+        <p>Useful audio accessories for music, calls and online learning.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Computer Services</h3>
+        <p>Basic computer setup and assistance.</p>
+      </div>
+
+      <div class="card">
+        <h3>Phone Services</h3>
+        <p>Help with phone setup, applications and basic troubleshooting.</p>
+      </div>
+
+      <div class="card">
+        <h3>Technical Support</h3>
+        <p>Practical help with common technology problems.</p>
+      </div>
+
+      <div class="card">
+        <h3>ICT Services</h3>
+        <p>ICT support for students, individuals and small businesses.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+
+    <div class="card">
+      <p>
+        <strong>Mansaray Investment</strong> is based in Makeni City, Sierra Leone.
+        Our goal is to provide useful products and reliable services while
+        helping customers with their technology needs.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title" style="color:white;">Contact Us</h2>
+
+    <p>WhatsApp / Phone: +232 90213367</p>
+    <p>Makeni City, Sierra Leone</p>
+
+    <div class="social">
+      <a class="whatsapp" href="https://wa.me/23290213367" target="_blank">
+        WhatsApp
+      </a>
+
+      <a class="tiktok" href="https://www.tiktok.com/@striker001" target="_blank">
+        TikTok
+      </a>
+
+      <a class="facebook" href="https://www.facebook.com/" target="_blank">
+        Facebook
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Mansaray Investment. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
