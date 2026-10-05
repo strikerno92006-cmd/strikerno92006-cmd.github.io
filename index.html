@@ -3,284 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mansaray Investment</title>
-
+  <title>Abubakarr Mansaray | Personal Website</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(135deg, #111827, #2563eb);
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .profile {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid white;
-      margin-bottom: 15px;
-      background: white;
-    }
-
-    header h1 {
-      font-size: 36px;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-    }
-
-    header p {
-      font-size: 18px;
-    }
-
-    nav {
-      background: white;
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    }
-
-    nav a {
-      color: #111827;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 0 12px;
-    }
-
-    nav a:hover {
-      color: #2563eb;
-    }
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 55px 20px;
-    }
-
-    .hero {
-      text-align: center;
-      background: white;
-      margin-top: 25px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
-
-    .hero h2 {
-      color: #2563eb;
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 22px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .btn:hover {
-      background: #1d4ed8;
-    }
-
-    h2.section-title {
-      text-align: center;
-      color: #111827;
-      margin-bottom: 30px;
-      font-size: 30px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .card h3 {
-      color: #2563eb;
-      margin-bottom: 10px;
-    }
-
-    .contact {
-      text-align: center;
-      background: #111827;
-      color: white;
-      border-radius: 15px;
-    }
-
-    .social a {
-      display: inline-block;
-      margin: 8px;
-      padding: 10px 16px;
-      border-radius: 7px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .whatsapp { background: #25D366; }
-    .tiktok { background: #000; }
-    .facebook { background: #1877F2; }
-
-    footer {
-      text-align: center;
-      background: #0b1120;
-      color: white;
-      padding: 20px;
-      margin-top: 30px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 28px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px 7px;
-      }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#172033;background:#f5f7fb}
+    header{position:sticky;top:0;z-index:10;background:#111827;color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    .nav{max-width:1100px;margin:auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-size:22px;font-weight:800;color:#f5c542}
+    nav a{color:#fff;text-decoration:none;margin-left:20px;font-size:14px}
+    nav a:hover{color:#f5c542}
+    .hero{min-height:88vh;display:flex;align-items:center;justify-content:center;padding:70px 24px;background:linear-gradient(135deg,#111827,#24324a)}
+    .hero-inner{max-width:1100px;width:100%;display:grid;grid-template-columns:1fr 360px;gap:70px;align-items:center}
+    .hero h1{font-size:56px;line-height:1.08;color:#fff;margin-bottom:18px}
+    .hero h1 span{color:#f5c542}
+    .hero p{color:#d9e0eb;font-size:19px;max-width:650px}
+    .buttons{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700}
+    .primary{background:#f5c542;color:#111827}
+    .secondary{border:1px solid #fff;color:#fff}
+    .photo-wrap{width:330px;height:400px;margin:auto;border-radius:24px;overflow:hidden;border:5px solid rgba(245,197,66,.9);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+    .photo-wrap img{width:100%;height:100%;object-fit:cover}
+    section{max-width:1100px;margin:auto;padding:80px 24px}
+    .section-title{text-align:center;font-size:34px;margin-bottom:35px;color:#111827}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+    .card{background:#fff;padding:30px;border-radius:16px;box-shadow:0 8px 30px rgba(17,24,39,.08)}
+    .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .skill{background:#fff;padding:24px;border-radius:14px;border-left:5px solid #f5c542;box-shadow:0 8px 25px rgba(17,24,39,.07)}
+    .skill h3{margin-bottom:8px}
+    .contact{background:#111827;color:#fff;max-width:none}
+    .contact-inner{max-width:1100px;margin:auto;padding:80px 24px;text-align:center}
+    .contact a{color:#f5c542;text-decoration:none}
+    .socials{margin-top:25px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .social{padding:10px 16px;border:1px solid #475569;border-radius:8px;color:#fff;text-decoration:none}
+    .social:hover{border-color:#f5c542;color:#f5c542}
+    footer{background:#080c14;color:#aeb8c8;text-align:center;padding:22px}
+    @media(max-width:800px){
+      .hero-inner,.about{grid-template-columns:1fr}
+      .hero{text-align:center}
+      .hero p{margin:auto}
+      .buttons{justify-content:center}
+      .hero h1{font-size:42px}
+      .photo-wrap{width:280px;height:340px}
+      .skills{grid-template-columns:1fr}
+      nav a{margin-left:9px}
     }
   </style>
 </head>
-
 <body>
 
-  <header>
-    <!-- Put your picture in the same folder and name it profile.jpg -->
-    <img src="profile.jpg" alt="Mansaray Investment" class="profile">
+<header>
+  <div class="nav">
+    <div class="logo">ABUBAKARR</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <h1>MANSARAY INVESTMENT</h1>
-    <p>Makeni City, Sierra Leone</p>
-  </header>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="home" class="hero">
-    <h2>Welcome to Mansaray Investment</h2>
-    <p>
-      We provide products and services designed to meet your everyday
-      technology and business needs.
-    </p>
-    <a href="#products" class="btn">View Products</a>
-  </section>
-
-  <section id="products">
-    <h2 class="section-title">Our Products</h2>
-
-    <div class="cards">
-      <div class="card">
-        <h3>📱 Smart Phones</h3>
-        <p>Quality smartphones for communication, entertainment and business.</p>
+<main>
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div>
+        <h1>Hello, I'm <span>Abubakarr Mansaray</span></h1>
+        <p>ICT student, tutor and footballer passionate about technology, learning and helping others develop their computer skills.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#about">About Me</a>
+          <a class="btn secondary" href="#contact">Contact Me</a>
+        </div>
       </div>
-
-      <div class="card">
-        <h3>💻 Laptops</h3>
-        <p>Computers suitable for school, office work and personal use.</p>
-      </div>
-
-      <div class="card">
-        <h3>🎧 Headsets</h3>
-        <p>Useful audio accessories for music, calls and online learning.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="services">
-    <h2 class="section-title">Our Services</h2>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Computer Services</h3>
-        <p>Basic computer setup and assistance.</p>
-      </div>
-
-      <div class="card">
-        <h3>Phone Services</h3>
-        <p>Help with phone setup, applications and basic troubleshooting.</p>
-      </div>
-
-      <div class="card">
-        <h3>Technical Support</h3>
-        <p>Practical help with common technology problems.</p>
-      </div>
-
-      <div class="card">
-        <h3>ICT Services</h3>
-        <p>ICT support for students, individuals and small businesses.</p>
+      <div class="photo-wrap">
+        <img src="profile.jpg" alt="Abubakarr Mansaray">
       </div>
     </div>
   </section>
 
   <section id="about">
-    <h2 class="section-title">About Us</h2>
-
-    <div class="card">
-      <p>
-        <strong>Mansaray Investment</strong> is based in Makeni City, Sierra Leone.
-        Our goal is to provide useful products and reliable services while
-        helping customers with their technology needs.
-      </p>
+    <h2 class="section-title">About Me</h2>
+    <div class="about">
+      <div class="card">
+        <h3>Who I Am</h3>
+        <p>I am Abubakarr Mansaray, an ICT student at Temzo Institute of Technology. I am interested in computers and technology, and I also enjoy football.</p>
+      </div>
+      <div class="card">
+        <h3>My Goal</h3>
+        <p>My goal is to continue improving my ICT knowledge and use my skills to help other people learn and work confidently with technology.</p>
+      </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2 class="section-title" style="color:white;">Contact Us</h2>
-
-    <p>WhatsApp / Phone: +232 90213367</p>
-    <p>Makeni City, Sierra Leone</p>
-
-    <div class="social">
-      <a class="whatsapp" href="https://wa.me/23290213367" target="_blank">
-        WhatsApp
-      </a>
-
-      <a class="tiktok" href="https://www.tiktok.com/@striker001" target="_blank">
-        TikTok
-      </a>
-
-      <a class="facebook" href="https://www.facebook.com/" target="_blank">
-        Facebook
-      </a>
+  <section id="skills">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills">
+      <div class="skill"><h3>ICT Tutor</h3><p>Helping learners understand computer and ICT topics.</p></div>
+      <div class="skill"><h3>Computer Skills</h3><p>Practical knowledge of common computer and office applications.</p></div>
+      <div class="skill"><h3>Football</h3><p>Football is one of my main interests outside technology.</p></div>
+      <div class="skill"><h3>Learning & Teaching</h3><p>Enjoying continuous learning and sharing knowledge with others.</p></div>
     </div>
   </section>
 
-  <footer>
-    <p>© 2026 Mansaray Investment. All Rights Reserved.</p>
-  </footer>
+  <section>
+    <h2 class="section-title">Education</h2>
+    <div class="card" style="text-align:center">
+      <h3>Temzo Institute of Technology</h3>
+      <p>Course: ICT</p>
+    </div>
+  </section>
+
+  <div class="contact" id="contact">
+    <div class="contact-inner">
+      <h2 class="section-title" style="color:#fff">Contact Me</h2>
+      <p>Phone: <a href="tel:+23290213367">+232 90213367</a></p>
+      <p>Email: <a href="mailto:strikerno92006@gmail.com">strikerno92006@gmail.com</a></p>
+      <div class="socials">
+        <!-- Replace the # values below with your actual profile links -->
+        <a class="social" href="#" target="_blank">Facebook</a>
+        <a class="social" href="#" target="_blank">Instagram</a>
+        <a class="social" href="#" target="_blank">TikTok</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Abubakarr Mansaray. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
