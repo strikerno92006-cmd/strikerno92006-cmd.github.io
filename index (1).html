@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mansaray Investment Enterprise</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #07111f;
+            color: white;
+            padding: 15px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 45px;
+            height: 45px;
+            background: #00a8ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo-area h2 {
+            font-size: 20px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00a8ff;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 650px;
+            background:
+                linear-gradient(rgba(4, 12, 24, 0.85), rgba(4, 12, 24, 0.85)),
+                url("https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            padding: 70px 7%;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero-content p {
+            color: #00a8ff;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content h1 {
+            font-size: 55px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h3 {
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero-content span {
+            color: #ddd;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary-btn {
+            background: #00a8ff;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: #0086cc;
+        }
+
+        .secondary-btn {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .secondary-btn:hover {
+            background: white;
+            color: #07111f;
+        }
+
+        /* ================= SECTION TITLES ================= */
+
+        .section-heading {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .section-heading p {
+            color: #00a8ff;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .section-heading span {
+            color: #666;
+        }
+
+        /* ================= PRODUCTS ================= */
+
+        .products-section {
+            padding: 90px 7%;
+            background: white;
+        }
+
+        .products-grid {
+            max-width: 1200px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            color: #00a8ff;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .product-info h3 {
+            margin: 8px 0;
+            font-size: 21px;
+        }
+
+        .product-info p {
+            color: #666;
+            line-height: 1.5;
+            font-size: 14px;
+            min-height: 45px;
+        }
+
+        .price {
+            color: #07111f;
+            font-size: 21px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .order-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            background: #00a8ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .order-btn:hover {
+            background: #0086cc;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about-section {
+            padding: 90px 7%;
+            background: #eef3f8;
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .about-text h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .about-list li {
+            margin: 12px 0;
+            font-weight: bold;
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services-section {
+            padding: 90px 7%;
+            background: white;
+        }
+
+        .services-grid {
+            max-width: 1100px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            padding: 35px 25px;
+            text-align: center;
+            background: #f5f7fa;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact-section {
+            background: #0b1220;
+            color: white;
+            padding: 90px 7%;
+        }
+
+        .contact-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact-heading p {
+            color: #00a8ff;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .contact-heading h2 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        .contact-heading span {
+            color: #bbb;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-info,
+        .order-box {
+            background: #131e30;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .contact-info h3,
+        .order-box h3 {
+            color: #00a8ff;
+            margin-bottom: 25px;
+        }
+
+        .contact-info p {
+            margin: 18px 0;
+            color: #ddd;
+        }
+
+        .order-box input,
+        .order-box textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 6px;
+            font-family: Arial, sans-serif;
+        }
+
+        .order-box textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .order-box button {
+            width: 100%;
+            padding: 14px;
+            background: #00a8ff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .order-box button:hover {
+            background: #0086cc;
+        }
+
+        /* ================= SOCIAL ================= */
+
+        .social-links {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .social-links h3 {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 18px;
+            background: #00a8ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .social-links a:hover {
+            background: #0086cc;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #050b14;
+            color: #aaa;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 1000px) {
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-content h1 {
+                font-size: 45px;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 600px;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+            .hero-content h3 {
+                font-size: 20px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-heading h2 {
+                font-size: 28px;
+            }
+
+            .section-heading h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo-area">
+        <div class="logo">M</div>
+
+        <h2>Mansaray Investment Enterprise</h2>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p>WELCOME TO</p>
+
+        <h1>Mansaray Investment Enterprise</h1>
+
+        <h3>Quality Electronics At Great Prices</h3>
+
+        <span>
+            Your trusted place for smartphones, laptops,
+            televisions, speakers, headphones and other
+            electronic devices.
+        </span>
+
+        <div class="hero-buttons">
+
+            <a href="#products" class="btn primary-btn">
+                Shop Now
+            </a>
+
+            <a href="#contact" class="btn secondary-btn">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products-section" id="products">
+
+    <div class="section-heading">
+
+        <p>OUR PRODUCTS</p>
+
+        <h2>Quality Electronics</h2>
+
+        <span>
+            Browse our selection of electronic products
+            and order directly through WhatsApp.
+        </span>
+
+    </div>
+
+
+    <div class="products-grid">
+
+
+        <!-- SMARTPHONE -->
+
+        <div class="product-card">
+
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80">
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Mobile
+                </span>
+
+                <h3>Smartphone</h3>
+
+                <p>
+                    Modern smartphones with great performance
+                    and useful features.
+                </p>
+
+                <div class="price">
+                    Le 4,500
+                </div>
+
+                <a
+                href="https://wa.me/23290213367?text=Hello%20Mansaray%20Investment%20Enterprise!%20I%20want%20to%20order%20the%20Smartphone%20for%20Le%204%2C500."
+                target="_blank"
+                class="order-btn">
+                    💬 Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- LAPTOP -->
+
+        <div class="product-card">
+
+            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80">
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Computer
+                </span>
+
+                <h3>Laptop</h3>
+
+                <p>
+                    Reliable laptops for school, business,
+                    work and entertainment.
+                </p>
+
+                <div class="price">
+                    Le 7,500
+                </div>
+
+                <a
+                href="https://wa.me/23290213367?text=Hello%20Mansaray%20Investment%20Enterprise!%20I%20want%20to%20order%20the%20Laptop%20for%20Le%207%2C500."
+                target="_blank"
+                class="order-btn">
+                    💬 Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SMART TV -->
+
+        <div class="product-card">
+
+            <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=80">
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Television
+                </span>
+
+                <h3>Smart TV</h3>
+
+                <p>
+                    Enjoy movies, sports, entertainment
+                    and smart TV features.
+                </p>
+
+                <div class="price">
+                    Le 700
+                </div>
+
+                <a
+                href="https://wa.me/23290213367?text=Hello%20Mansaray%20Investment%20Enterprise!%20I%20want%20to%20order%20the%20Smart%20TV%20for%20Le%20700."
+                target="_blank"
+                class="order-btn">
+                    💬 Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- BLUETOOTH SPEAKER -->
+
+        <div class="product-card">
+
+            <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80">
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Audio
+                </span>
+
+                <h3>Bluetooth Speaker</h3>
+
+                <p>
+                    Portable speakers for music,
+                    entertainment and events.
+                </p>
+
+                <div class="price">
+                    Le 500
+                </div>
+
+                <a
+                href="https://wa.me/23290213367?text=Hello%20Mansaray%20Investment%20Enterprise!%20I%20want%20to%20order%20the%20Bluetooth%20Speaker%20for%20Le%20500."
+                target="_blank"
+                class="order-btn">
+                    💬 Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HEADPHONES -->
+
+        <div class="product-card">
+
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80">
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Audio
+                </span>
+
+                <h3>Wireless Headphones</h3>
+
+                <p>
+                    Comfortable wireless headphones
+                    for music and calls.
+                </p>
+
+                <div class="price">
+                    Le 700
+                </div>
+
+                <a
+                href="https://wa.me/23290213367?text=Hello%20Mansaray%20Investment%20Enterprise!%20I%20want%20to%20order%20the%20Wireless%20Headphones%20for%20Le%20700."
+                target="_blank"
+                class="order-btn">
+                    💬 Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SMARTWATCH -->
+
+        <div class="product-card">
+
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80">
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Wearable
+                </span>
+
+                <h3>Smartwatch</h3>
+
+                <p>
+                    Stylish smartwatches with useful
+                    everyday smart features.
+                </p>
+
+                <div class="price">
+                    Le 1,200
+                </div>
+
+                <a
+                href="https://wa.me/23290213367?text=Hello%20Mansaray%20Investment%20Enterprise!%20I%20want%20to%20order%20the%20Smartwatch%20for%20Le%201%2C200."
+                target="_blank"
+                class="order-btn">
+                    💬 Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- POWER BANK -->
+
+        <div class="product-card">
+
+            <img src="https://images.unsplash.com/photo-1609592424961-6f4d0e6b5c8d?auto=format&fit=crop&w=800&q=80">
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Accessories
+                </span>
+
+                <h3>Power Bank</h3>
+
+                <p>
+                    Portable power for charging your
+                    mobile devices when needed.
+                </p>
+
+                <div class="price">
+                    Le 600
+                </div>
+
+                <a
+                href="https://wa.me/23290213367?text=Hello%20Mansaray%20Investment%20Enterprise!%20I%20want%20to%20order%20the%20Power%20Bank%20for%20Le%20600."
+                target="_blank"
+                class="order-btn">
+                    💬 Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- WI-FI ROUTER -->
+
+        <div class="product-card">
+
+            <img src="https://images.un
